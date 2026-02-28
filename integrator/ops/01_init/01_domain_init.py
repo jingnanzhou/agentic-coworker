@@ -28,10 +28,10 @@ import numpy as np
 
 logger = get_logger(__name__)
 
-DOMAINS_JSON_PATH = os.path.join(os.path.dirname(__file__), "../../../data/seed_data/01_domains/seed_domains_v1.json")
-CAPABILITIES_JSON_PATH = os.path.join(os.path.dirname(__file__), "../../../data/seed_data/01_domains/seed_capabilities_v1.json")
-CANONICAL_SKILLS_JSON_PATH = os.path.join(os.path.dirname(__file__), "../../../data/seed_data/01_domains/seed_capability_minimum_skills_v1.json")
-WORKFLOWS_JSON_PATH = os.path.join(os.path.dirname(__file__), "../../../data/seed_data/01_domains/seed_workflows_v1.json")
+DOMAINS_JSON_PATH = os.path.join(os.path.dirname(__file__), "../../../data/seed_data/domains/seed_domains.json")
+CAPABILITIES_JSON_PATH = os.path.join(os.path.dirname(__file__), "../../../data/seed_data/domains/seed_capabilities.json")
+CANONICAL_SKILLS_JSON_PATH = os.path.join(os.path.dirname(__file__), "../../../data/seed_data/domains/seed_capability_minimum_skills.json")
+WORKFLOWS_JSON_PATH = os.path.join(os.path.dirname(__file__), "../../../data/seed_data/domains/seed_workflows.json")
 
 
 def load_domains(sess, emb, json_path):

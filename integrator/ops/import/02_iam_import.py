@@ -500,7 +500,10 @@ def main(backup_dir=None):
         print("Usage: python 02_iam_import.py <backup_directory>")
         print("Example: python 02_iam_import.py ../../backup_data/20251102_195253")
         #sys.exit(1)
-        backup_dir="/Users/jingnan.zhou/workspace/aintegrator/data/backup_data/20260126_142613/iam_all"
+        # Use the most recent backup if no specific directory provided
+        backup_dir= os.path.join(os.path.dirname(__file__), "../../../data/backup_data/default_restore/iam_all")
+
+
     elif len(sys.argv) == 2:  
         backup_dir = sys.argv[1]
     

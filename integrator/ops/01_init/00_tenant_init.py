@@ -22,7 +22,7 @@ import numpy as np
 
 logger = get_logger(__name__)
 
-INIT_TENANT_JSON_PATH = os.path.join(os.path.dirname(__file__), "../../../data/seed_data/00_tenants/seed_tenants_v1.json")
+INIT_TENANT_JSON_PATH = os.path.join(os.path.dirname(__file__), "../../../data/seed_data/tenants/seed_tenants.json")
 
 from integrator.iam.iam_db_crud import (
     upsert_tenant

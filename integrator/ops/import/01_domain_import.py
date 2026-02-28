@@ -675,27 +675,11 @@ def main(backup_dir=None, clear_existing=False):
     """Main import function for domain data"""
     if not backup_dir:
         # Use the most recent backup if no specific directory provided
-        backup_base = os.path.join(os.path.dirname(__file__), "../../backup_data")
-        if not os.path.exists(backup_base):
-            logger.error(f"Backup directory not found: {backup_base}")
+        backup_dir= os.path.join(os.path.dirname(__file__), "../../../data/backup_data/default_restore/domains_all")
+        if not os.path.exists(backup_dir):
+            logger.error(f"Backup directory not found: {backup_dir}")
             return False
-        
-        # Find the most recent backup with domains folder
-        backup_dirs = []
-        for item in os.listdir(backup_base):
-            item_path = os.path.join(backup_base, item)
-            domains_path = os.path.join(item_path, "domains")
-            if os.path.isdir(item_path) and os.path.exists(domains_path):
-                backup_dirs.append(item)
-        
-        if not backup_dirs:
-            logger.error("No domain backups found")
-            return False
-        
-        # Use the most recent backup
-        backup_dirs.sort(reverse=True)
-        backup_dir = os.path.join(backup_base, backup_dirs[0], "domains")
-        logger.info(f"Using most recent backup: {backup_dir}")
+        logger.info(f"Using the backup: {backup_dir}")
     
     if not os.path.exists(backup_dir):
         logger.error(f"Backup directory not found: {backup_dir}")

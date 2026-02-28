@@ -16,8 +16,8 @@ import numpy as np
 
 logger = get_logger(__name__)
 
-INITIAL_SERVICES_JSON_PATH = os.path.join(os.path.dirname(__file__), "../../../data/seed_data/03_tools/seed_mcp_tools_v1.json")
-INIT_APP_KEYS_JSON_PATH = os.path.join(os.path.dirname(__file__), "../../../data/seed_data/03_tools/seed_app_keys_v1.json")
+INITIAL_SERVICES_JSON_PATH = os.path.join(os.path.dirname(__file__), "../../../data/seed_data/03_tools/seed_mcp_tools.json")
+INIT_APP_KEYS_JSON_PATH = os.path.join(os.path.dirname(__file__), "../../../data/seed_data/03_tools/seed_app_keys.json")
 
 from integrator.utils.host import generate_host_id_from_url,generate_host_id
 

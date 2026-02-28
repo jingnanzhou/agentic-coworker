@@ -2,7 +2,7 @@
 
 # Script to create tables, triggers, functions, and indexes in the agent-portal database (PostgreSQL in Docker)
 
-DB_NAME="agent-portal"
+DB_NAME="agent-studio"
 DB_USER="user"
 CONTAINER_NAME="postgres" # Adjust if your container name is different
 

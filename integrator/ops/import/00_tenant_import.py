@@ -109,8 +109,8 @@ def main():
     if len(sys.argv) != 2:
         print("Usage: python 01_tenant_import.py <backup_directory>")
         print("Example: python 01_tenant_import.py ../../backup_data/tenants_20251102_193429")
-        sys.exit(1)
-        #backup_dir="../data/backup_data/tenants_20260126_142445"
+        #sys.exit(1)
+        backup_dir="../data/backup_data/default_restore/tenants"
     else:
         backup_dir = sys.argv[1]
     

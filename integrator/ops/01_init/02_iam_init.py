@@ -21,9 +21,9 @@ import numpy as np
 
 logger = get_logger(__name__)
 
-ROLES_JSON_PATH = os.path.join(os.path.dirname(__file__), "../../../data/seed_data/02_iam/seed_roles_v1.json")
-ROLE_CAT_JSON_PATH = os.path.join(os.path.dirname(__file__), "../../../data/seed_data/02_iam/seed_role_domain_v1.json")
-ROLE_USER_JSON_PATH = os.path.join(os.path.dirname(__file__), "../../../data/seed_data/02_iam/seed_role_user_v1.json")
+ROLES_JSON_PATH = os.path.join(os.path.dirname(__file__), "../../../data/seed_data/iam/seed_roles.json")
+ROLE_CAT_JSON_PATH = os.path.join(os.path.dirname(__file__), "../../../data/seed_data/iam/seed_role_domain.json")
+ROLE_USER_JSON_PATH = os.path.join(os.path.dirname(__file__), "../../../data/seed_data/iam/seed_role_user.json")
 
 
 def load_roles(sess, emb, json_path):

@@ -66,7 +66,13 @@ cd agentic-coworker
 
 # Configure environment
 cp .env.docker.sample .env.docker
-# Edit .env.docker and add your OpenAI, or Azure OpenAI or Google AI credentials
+
+# ⚠️ REQUIRED STEP: Configure Your LLM Provider
+# You MUST edit .env.docker and add your LLM API credentials before proceeding.
+# The platform will NOT work without valid LLM configuration.
+#
+# Get a FREE Google Gemini API key here: https://aistudio.google.com/api-keys
+# Or use OpenAI, Azure OpenAI, or Anthropic (see Configuration section below)
 
 # Start the platform
 docker-compose up -d
@@ -76,6 +82,22 @@ docker-compose ps
 ```
 
 **First startup takes 2-3 minutes** to initialize the database and configure services.
+
+### Quick Start/Stop Scripts
+
+For convenience, use these scripts to quickly start and stop the platform:
+
+**Linux/macOS:**
+```bash
+./start.sh      # Start all services
+./cleanup.sh    # Stop services and remove volumes
+```
+
+**Windows:**
+```cmd
+start.bat       # Start all services
+cleanup.bat     # Stop services and remove volumes
+```
 
 ### Access the Platform
 
@@ -223,6 +245,20 @@ The Agentic Coworker platform enables AI agents to work autonomously across your
 | **Agent Ops** | - | Database operations utility |
 
 ## 🛠️ Common Operations
+
+### Quick Scripts (Recommended)
+
+**Linux/macOS:**
+```bash
+./start.sh      # Start all services (equivalent to: docker-compose up -d)
+./cleanup.sh    # Stop and remove all volumes (equivalent to: docker-compose down + volume cleanup)
+```
+
+**Windows:**
+```cmd
+start.bat       # Start all services
+cleanup.bat     # Stop and remove all volumes
+```
 
 ### Managing Services
 

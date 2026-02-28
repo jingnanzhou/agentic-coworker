@@ -591,7 +591,8 @@ def main(backup_dir=None):
         print("Usage: python 03_tools_import.py <backup_directory>")
         print("Example: python 03_tools_import.py ../../backup_data/20251103_142801")
         #sys.exit(1)
-        backup_dir="/Users/jingnan.zhou/workspace/aintegrator/data/backup_data/20260126_143019/tools_all"
+        backup_dir= os.path.join(os.path.dirname(__file__), "../../../data/backup_data/default_restore/tools_all")
+
     if len(sys.argv) == 2:  
         backup_dir = sys.argv[1]
     
